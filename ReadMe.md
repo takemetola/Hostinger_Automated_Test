@@ -118,7 +118,9 @@ Verify that a user can successfully add additional details to their account info
 
 3. **Update Additional Details with a Message**
    - Locate the "Additional Details" or "Profile Message" section.
-   - Add the message "I hope you're having a great day so far! Cheers."
+   - Add the message "Why did the candidate bring a ladder to the job interview?
+
+Because they heard the job description said "looking for someone who can take things to the next level"!"
    - Save the changes.
 
 #### Expected Results

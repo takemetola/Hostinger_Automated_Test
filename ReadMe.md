@@ -8,7 +8,7 @@ To verify that existing users can successfully log in via Gmail to their <a href
   Data used: 
   e-mail: desire2work4hostinger@gmail.com
   password: testas123
-- A web browser (Google Chrome) installed on the testing machine.
+- A web browser (Google Chrome Version 120.0.6099.216) installed on the testing machine.
 
 ## Test Steps:
 

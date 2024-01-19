@@ -10,7 +10,7 @@ To verify that existing users can successfully log in via Gmail to their <a href
   password: testas123
 - A web browser (Google Chrome) installed on the testing machine.
 
-## Test Steps
+## Test Steps:
 
 1. **Open Web Browser:**
     - Open the web browser.

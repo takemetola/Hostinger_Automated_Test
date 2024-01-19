@@ -53,7 +53,7 @@ Verify that a user can successfully update their account information, including 
 #### Objective
 Verify that a user can successfully update their name in the account information.
 
-#### Steps
+#### Test Steps:
 1. **Login with Existing User Data**
    - Navigate to the login page.
    - Enter valid existing user credentials.

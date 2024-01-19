@@ -35,7 +35,8 @@ To verify that existing users can successfully log in via Gmail to their <a href
 
 ## Expected Result
 - The user should be successfully logged in, and the system should redirect to the user's account dashboard.
-- A welcome message "Hi, Kate" should be displayed and test should read desire2work4hostinger@gmail.com email.
+- A welcome message "Hi, Kate" should be displayed and test should read desire2work4hostinger@gmail.com email from
+Account info tab.
 
 ## Postconditions
 - The user should have access to their account settings.

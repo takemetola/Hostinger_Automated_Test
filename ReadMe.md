@@ -40,3 +40,51 @@ Account info tab.
 
 ## Postconditions
 - The user should have access to their account settings.
+
+
+# Test Case02: User Profile Update
+
+## Objective
+Verify that a user can successfully update their account information, including changing their name, phone number, and adding additional details.
+
+## Steps
+
+1. **Login with Existing User Data**
+    - Navigate to the login page.
+    - Enter valid existing user credentials (username and password).
+    - Click on the login button.
+    - Verify that the user is successfully logged in.
+
+2. **Navigate to Account Information**
+    - Once logged in, navigate to the Account tab.
+    - Click on the "Account Information" option.
+
+3. **Change Name to John Wick**
+    - Locate the "Name" field in the account information section.
+    - Change the current name to "John Wick."
+    - Save the changes.
+
+4. **Change Phone Number with Password Confirmation**
+    - Locate the "Phone Number" field in the account information section.
+    - Change the current phone number.
+    - Enter the user's password to confirm the change.
+    - Save the changes.
+
+5. **Update Additional Details with a Message**
+    - Locate the "Additional Details" or "Profile Message" section.
+    - Add the message "I hope you're having a great day so far! Cheers."
+    - Save the changes.
+
+## Expected Results
+
+- After step 1, the user should be successfully logged in.
+- After step 3, the user's name should be updated to "John Wick."
+- After step 4, the phone number should be changed, and the changes should be confirmed with the password.
+- After step 5, the additional details should include the added message.
+
+## Notes
+
+- Ensure the application provides appropriate feedback or confirmation messages after each step.
+- Confirm that the updated information is reflected on the user's profile page.
+- Pay attention to any error messages or unexpected behavior during the process.
+

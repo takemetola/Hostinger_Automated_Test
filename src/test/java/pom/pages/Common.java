@@ -3,6 +3,7 @@ package pom.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pom.utils.Driver;
@@ -56,5 +57,17 @@ public class Common {
     public static String getText(By locator) {
 
         return getElement(locator).getText();
+    }
+
+    public static void clearText(By locator) {
+        getElement(locator).clear();
+    }
+
+    public static void doubleClickOnElementByActions(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+//                .moveToElement(getElement(locator))
+                .doubleClick(getElement(locator))
+                .perform();
     }
 }

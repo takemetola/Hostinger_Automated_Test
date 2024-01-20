@@ -126,3 +126,47 @@ Because they heard the job description said "looking for someone who can take th
 #### Expected Results
 - After step 1, the user should be successfully logged in.
 - After step 3, the additional details should include the added message.
+
+
+# Test Case Scenario 3: Domain Search and service addition to shopping cart
+## Preconditions:
+- Login with valid account on set up:
+  Data used:
+  e-mail: desire2work4hostinger@gmail.com
+  password: Testas123!
+
+## Steps:
+1. **Navigate to the Hostinger.com homepage.**
+   - Should be on the homepage when logged in with set up account.
+
+2. **Click on the "Domains" link.**
+   - *Action:* Locate and click on the "Domains" link on the homepage.
+
+3. **Enter the domain name "mylatestproject" in the domain search name box.**
+   - *Action:* Type "mylatestproject" into the domain name input box.
+
+4. **Click the "Search" button.**
+   - *Action:* Click on the "Search" button.
+
+5. **Scroll to the bottom of the screen.**
+   - *Action:* Scroll down to the bottom of the search results.
+
+6. **Confirm that "mylatestproject.ai" is available.**
+   - *Action:* Verify the availability of "mylatestproject.ai" in the search results.
+
+7. **Click on the "Buy Domain" button.**
+   - *Action:* Click on the "Buy Domain" button.
+
+8. **Read the total price for 2 years of renting the domain.**
+   - *Action:* Locate and read the total price displayed for a 2-year rental of the domain during the checkout process.
+
+## Expected Results:
+- The user should successfully navigate to the domain search page and enter the desired domain name.
+- The search results should be displayed, and "mylatestproject.ai" should be available.
+- The user should be able to click on "Buy Domain" and proceed to the checkout page.
+- The total price for a 2-year rental of the domain should be clearly displayed.
+
+## Postconditions:
+- The test domain ("mylatestproject.ai") is added to the user's shopping cart.
+- The user is ready to proceed with the domain purchase.
+

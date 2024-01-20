@@ -23,27 +23,28 @@ public class DomainSearchTest extends TestBase {
     }
 
     @Test
-    public void testDomainSearchAndShoppingCartFunctionality() throws InterruptedException {
+    public void testDomainSearchAndShoppingCartFunctionality() {
 
         String domainName = "mylatestproject";
-        String expectedResult = "";
+        String expectedResult = "$217.78";
         String actualResult;
 
         DomainSearchPage.clickOnDomainSection();
         DomainSearchPage.inputDomainNameToSeachBox(domainName);
         DomainSearchPage.buttonClickSearch();
         String expectedResul1 = DomainSearchPage.readIsDomainAvailable();
+
         if (expectedResul1==expectedResul1) {
             System.out.println("Domain with %s was found".formatted(expectedResul1));
         }
         else {
-            System.out.println("Domain not found.");
+            System.out.println("Domain not found. Test Terminated.");
             System.exit(0);
         }
-        Thread.sleep(2000);
+
         DomainSearchPage.clickOnBuyDomain();
 
-        actualResult = "";
+        actualResult = DomainSearchPage.readTotalPrice();
 
         Assert.assertEquals(actualResult, expectedResult);
     }

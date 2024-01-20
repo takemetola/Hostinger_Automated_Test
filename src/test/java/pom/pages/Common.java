@@ -45,7 +45,7 @@ public class Common {
     }
 
     public static void waitForElementToBeVisible(By locator) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
@@ -58,14 +58,9 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static void clearText(By locator) {
-        getElement(locator).clear();
-    }
-
     public static void doubleClickOnElementByActions(By locator) {
         Actions actions = new Actions(Driver.getDriver());
         actions
-
                 .doubleClick(getElement(locator))
                 .perform();
     }

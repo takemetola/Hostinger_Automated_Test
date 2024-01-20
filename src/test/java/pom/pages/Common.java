@@ -74,4 +74,11 @@ public class Common {
 
         actions.perform();
     }
+
+    public static void scrollWindowByActionsPlus3500Y() {
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .scrollByAmount(0, 3500)
+                .perform();
+    }
 }

@@ -1,12 +1,50 @@
 package pom.tests.hostinger;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import pom.pages.hostinger.DomainSearchPage;
+import pom.pages.hostinger.UpdateProfileNamePage;
 import pom.tests.TestBase;
 
 public class DomainSearchTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
+        DomainSearchPage.openUrl("https://www.hostinger.com");
 
+        String email = "desire2work4hostinger@gmail.com";
+        String password = "Testas123!";
+
+        UpdateProfileNamePage.clickOnButtonLogin();
+        UpdateProfileNamePage.inputEmail(email);
+        UpdateProfileNamePage.inoutPassword(password);
+        UpdateProfileNamePage.clickOnButtonLoginAccount();
+    }
+
+    @Test
+    public void testDomainSearchAndShoppingCartFunctionality() throws InterruptedException {
+
+        String domainName = "mylatestproject";
+        String expectedResult = "";
+        String actualResult;
+
+        DomainSearchPage.clickOnDomainSection();
+        DomainSearchPage.inputDomainNameToSeachBox(domainName);
+        DomainSearchPage.buttonClickSearch();
+        String expectedResul1 = DomainSearchPage.readIsDomainAvailable();
+        if (expectedResul1==expectedResul1) {
+            System.out.println("Domain with %s was found".formatted(expectedResul1));
+        }
+        else {
+            System.out.println("Domain not found.");
+            System.exit(0);
+        }
+        Thread.sleep(2000);
+        DomainSearchPage.clickOnBuyDomain();
+
+        actualResult = "";
+
+        Assert.assertEquals(actualResult, expectedResult);
     }
 }

@@ -11,7 +11,7 @@ public class AdditionalInfoTest extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {
-        AdditionalInfoPage.openUrl("https://www.hostinger.com/");
+        AdditionalInfoPage.openUrl("https://www.hostinger.com");
 
         String email = "desire2work4hostinger@gmail.com";
         String password = "Testas123!";

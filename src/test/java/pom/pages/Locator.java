@@ -83,5 +83,15 @@ public class Locator {
             public static By buttonConfirmClick =
                     By.xpath("//button[@data-qa='hpanel_tracking-personal-information-confirm_button']");
         }
+
+        public class DomainSearchPage {
+            public static By spanDomains = By.xpath("//span[@class='header-menu__link-text' " +
+                    "and @data-msgid='Domains']");
+            public static By formFieldDomainName = By.xpath("//hp-form-field[@name='searchedDomain']");
+            public static By buttonSearch = By.xpath("//button[@class='h-button-v2 submit-button']");
+            public static By spanAiDomain =
+                    By.xpath("//span[contains(@class, 'h-text-break-keep-all') and contains(text(), '.ai')]");
+            public static By buttonBuyDomain = By.xpath("(//span[@class='h-button-v2__text' and text()='Buy domain'])[19]");
+        }
     }
 }

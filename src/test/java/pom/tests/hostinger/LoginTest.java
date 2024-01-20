@@ -2,6 +2,7 @@ package pom.tests.hostinger;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pom.pages.hostinger.LoginPage;
 import pom.tests.TestBase;
@@ -13,11 +14,15 @@ public class LoginTest  extends TestBase {
         LoginPage.openUrl("https://www.hostinger.com/");
         LoginPage.clickCookiesDecline();
     }
-    @Test
-    public void TestLogin(){
-        String email = "desire2work4hostinger@gmail.com";
-        String password = "testas123";
-        String expectedResult = "desire2work4hostinger@gmail.com";
+    @DataProvider(name = "testLogin")
+    public static Object[][] provideDataForTestLogin() {
+        return new Object[][]{
+                {"desire2work4hostinger@gmail.com", "testas123", "desire2work4hostinger@gmail.com"}
+        };
+    }
+
+    @Test(dataProvider = "testLogin")
+    public void testLogin(String email, String password, String expectedResult){
         String actualResult;
 
         LoginPage.clickOnButtonLogin();

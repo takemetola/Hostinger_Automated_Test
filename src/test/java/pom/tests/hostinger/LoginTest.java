@@ -1,10 +1,8 @@
 package pom.tests.hostinger;
 
-import org.apache.commons.logging.Log;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pom.pages.Locator;
 import pom.pages.hostinger.LoginPage;
 import pom.tests.TestBase;
 

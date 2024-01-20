@@ -49,7 +49,6 @@ public class Locator {
             public static By textAddFirstName = By.xpath("//hp-form-field[@name='firstName']");
             public static By elementWaitNameBox = By.xpath("//hp-form-field[@name='firstName']");
             public static By elementNameBoxClick = By.xpath("//hp-form-field[@name='firstName']");
-            public static By textBoxFirstNameClear = By.xpath("//hp-form-field[@name='firstName']");
             public static By locatorWaitAccountTab =
                     By.xpath("//button[@class='header__user-profile button-plain header__icon']");
             public static By elementLastNameBoxClick = By.xpath("//hp-form-field[@name='lastName']");
@@ -65,7 +64,8 @@ public class Locator {
                     By.xpath("//button[@data-qa='hpanel_tracking-personal-information-confirm_button']");
             public static By passwordBoxElementWait = By.xpath("//hp-form-field[@name='currentPassword']");
             public static By passwordBoxElementClick = By.xpath("//hp-form-field[@name='currentPassword']");
-            public static By readTextFullName = By.xpath("//div[@class='text-md-left text-sm-right text-left' and text()='John Wick']");
+            public static By readTextFullName =
+                    By.xpath("//div[@class='text-md-left text-sm-right text-left' and text()='John Wick']");
         }
 
         public class UpdatePhoneNumberPage {
@@ -73,15 +73,21 @@ public class Locator {
                     By.xpath("//p[@data-msgid='Phone number' and text()='Phone number']");
             public static By elementPhoneBoxClick = By.xpath("//hp-form-field[@name='phone']");
             public static By textAddPhoneNumber = By.xpath("//hp-form-field[@name='phone']");
-            public static By elementPhoneBox2 = By.xpath("//p[@data-msgid='Phone number' and text()='Phone number']");
+            public static By elementPhoneBox2 =
+                    By.xpath("//p[@data-msgid='Phone number' and text()='Phone number']");
             public static By phoneNumberGroupClick = By.xpath("//hp-form-field[@name='phone']");
-            public static By buttonClickConfirmChanges = By.xpath("//button[@data-v-2fe5f685 and @data-qa='hpanel_tracking-personal-information-continue_button']");
+            public static By buttonClickConfirmChanges =
+                    By.xpath("//button[@data-v-2fe5f685 " +
+                            "and @data-qa='hpanel_tracking-personal-information-continue_button']");
             public static By textAddPassword = By.xpath("//hp-form-field[@name='currentPassword']");
             public static By buttonClickConfirm =
                     By.xpath("//button[@data-qa='hpanel_tracking-personal-information-confirm_button']");
             public static By passwordBoxElementWait = By.xpath("//hp-form-field[@name='currentPassword']");
-            public static By passwordBoxElementClick = By.xpath("//hp-form-field[@name='currentPassword']");
-            public static By textReadPhoneNumber = By.xpath("//div[@class='text-md-left text-sm-right text-left' and text()='+370 123123']");
+            public static By passwordBoxElementClick =
+                    By.xpath("//hp-form-field[@name='currentPassword']");
+            public static By textReadPhoneNumber =
+                    By.xpath("//div[@class='text-md-left text-sm-right text-left' " +
+                            "and text()='+370 123123']");
         }
 
         public class AdditionalInfoPage {
@@ -89,14 +95,28 @@ public class Locator {
             public static By passwordBoxElementWait = By.xpath("//hp-form-field[@name='currentPassword']");
             public static By passwordBoxElementClick = By.xpath("//hp-form-field[@name='currentPassword']");
             public static By textAddPassword = By.xpath("//hp-form-field[@name='currentPassword']");
-            public static By elementAdditionalDetailsGroup = By.xpath("//p[@data-msgid='Additional details']");
-            public static By buttonClickOnAdditionalDetailsGroup = By.xpath("//p[@data-msgid='Additional details']");
-            public static By elementTextBox = By.xpath("//div[@data-v-577ee0b7='' and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
-            public static By textAddToTextBox = By.xpath("//div[@data-v-577ee0b7='' and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
-            public static By buttonClickContinueAtInfoField = By.xpath("//button[@data-v-2fe5f685 and @data-v-577ee0b7 and @class='h-button-v2' and @hp-form-submit and @data-qa='hpanel_tracking-personal-information-continue_button']");
-            public static By textReadMessage = By.xpath("//div[contains(text(), 'Why did the candidate bring a ladder to the job interview?')]");
-            public static By elementTextBoxWait = By.xpath("//div[@data-v-577ee0b7='' and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
-            public static By clearText = By.xpath("//div[@data-v-577ee0b7='' and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
+            public static By elementAdditionalDetailsGroup =
+                    By.xpath("//p[@data-msgid='Additional details']");
+            public static By buttonClickOnAdditionalDetailsGroup =
+                    By.xpath("//p[@data-msgid='Additional details']");
+            public static By elementTextBox =
+                    By.xpath("//div[@data-v-577ee0b7='' " +
+                            "and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
+            public static By textAddToTextBox =
+                    By.xpath("//div[@data-v-577ee0b7='' " +
+                            "and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
+            public static By buttonClickContinueAtInfoField =
+                    By.xpath("//button[@data-v-2fe5f685 and @data-v-577ee0b7 " +
+                            "and @class='h-button-v2' and @hp-form-submit " +
+                            "and @data-qa='hpanel_tracking-personal-information-continue_button']");
+            public static By textReadMessage =
+                    By.xpath("//div[contains(text(), " +
+                            "'Why did the candidate bring a ladder to the job interview?')]");
+            public static By elementTextBoxWait =
+                    By.xpath("//div[@data-v-577ee0b7='' " +
+                            "and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
+            public static By buttonConfirmClick =
+                    By.xpath("//button[@data-qa='hpanel_tracking-personal-information-confirm_button']");
         }
     }
 }

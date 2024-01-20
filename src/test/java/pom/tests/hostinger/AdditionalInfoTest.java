@@ -26,12 +26,16 @@ public class AdditionalInfoTest extends TestBase {
     }
 
     @Test
-    public void testAddingMoreInfoToProfile(){
+    public void testAddingMoreInfoToProfile() throws InterruptedException {
 
         String text = "Why did the candidate bring a ladder to the job interview?\n" +
-                "\n" + "Because they heard the job description said \"looking for someone who can take things to the next level\"!";
+                "\n" + "Because they heard the job description said \"" +
+                "looking for someone who can take things to the next level\"!";
         String password = "Testas123!";
-        String expectedResult = "Why did the candidate bring a ladder to the job interview? Because they heard the job description said \"looking for someone who can take things to the next level\"!";
+        String expectedResult =
+                "Why did the candidate bring a ladder to the job interview? " +
+                        "Because they heard the job description said " +
+                        "\"looking for someone who can take things to the next level\"!";
         String actualResult;
 
         AdditionalInfoPage.clickOnAdditionalDetailsGroup();
@@ -40,8 +44,11 @@ public class AdditionalInfoTest extends TestBase {
         AdditionalInfoPage.addTextConfirmPassword(password);
         AdditionalInfoPage.clickOnConfirmButton();
 
+        Thread.sleep(2000);
         actualResult = AdditionalInfoPage.readTextMessage();
 
         Assert.assertEquals(actualResult, expectedResult);
+
+        System.out.println("Actual result: %s \nExpected result: %s".formatted(actualResult,expectedResult));
     }
 }

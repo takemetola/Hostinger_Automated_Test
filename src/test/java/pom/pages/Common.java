@@ -43,6 +43,7 @@ public class Common {
         }
         return true;
     }
+
     public static void waitForElementToBeVisible(By locator) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -64,8 +65,18 @@ public class Common {
     public static void doubleClickOnElementByActions(By locator) {
         Actions actions = new Actions(Driver.getDriver());
         actions
-//                .moveToElement(getElement(locator))
+
                 .doubleClick(getElement(locator))
                 .perform();
+    }
+
+    public static void ctrlAAndDelete(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        WebElement element = getElement(locator);
+        actions.moveToElement(element).keyDown(Keys.COMMAND).sendKeys("a").keyUp(Keys.COMMAND);
+
+        actions.sendKeys(Keys.BACK_SPACE);
+
+        actions.perform();
     }
 }

@@ -104,8 +104,13 @@ Verify that a user can successfully update their phone number in the account inf
 
 #### Objective
 Verify that a user can successfully add additional details to their account information.
+## Preconditions:
+- Login with valid account on set up:
+  Data used:
+  e-mail: desire2work4hostinger@gmail.com
+  password: Testas123!
 
-#### Steps
+#### Steps:
 1. **Login with Existing User Data**
    - Navigate to the login page.
    - Enter valid existing user credentials.
@@ -162,11 +167,8 @@ Because they heard the job description said "looking for someone who can take th
 
 ## Expected Results:
 - The user should successfully navigate to the domain search page and enter the desired domain name.
-- The search results should be displayed, and "mylatestproject.ai" should be available.
+- The search results should be displayed, and ".ai" should be available.
 - The user should be able to click on "Buy Domain" and proceed to the checkout page.
 - The total price for a 2-year rental of the domain should be clearly displayed.
 
-## Postconditions:
-- The test domain ("mylatestproject.ai") is added to the user's shopping cart.
-- The user is ready to proceed with the domain purchase.
 

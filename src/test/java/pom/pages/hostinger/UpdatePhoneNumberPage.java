@@ -10,12 +10,12 @@ public class UpdatePhoneNumberPage {
     }
 
     public static void clickOnPhoneNumberGroup() {
-        Common.waitForElementToBeVisible(5, Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
+        Common.waitForElementToBeVisible(Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
         Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
     }
 
     public static void addPhoneNumber(String phoneNumber) {
-        Common.waitForElementToBeVisible(4, Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
+        Common.waitForElementToBeVisible(5, Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
         Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.textAddPhoneNumber);
         Common.ctrlAAndDelete(Locator.Hostinger.UpdatePhoneNumberPage.textAddPhoneNumber);
         Common.addText(Locator.Hostinger.UpdatePhoneNumberPage.textAddPhoneNumber, phoneNumber);

@@ -78,8 +78,7 @@ public class Locator {
                             "and @class='h-button-v2' and @hp-form-submit " +
                             "and @data-qa='hpanel_tracking-personal-information-continue_button']");
             public static By textReadMessage =
-                    By.xpath("//div[contains(text(), " +
-                            "'Why did the candidate bring a ladder to the job interview?')]");
+                    By.xpath("(//div[@class='text-md-left text-sm-right text-left'])[5]");
             public static By buttonConfirmClick =
                     By.xpath("//button[@data-qa='hpanel_tracking-personal-information-confirm_button']");
         }

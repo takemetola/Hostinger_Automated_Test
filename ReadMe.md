@@ -156,7 +156,7 @@ Because they heard the job description said "looking for someone who can take th
 5. **Scroll to the bottom of the screen.**
    - *Action:* Scroll down to the bottom of the search results.
 
-6. **Confirm that "mylatestproject.ai" is available.**
+6. **Confirm that ".ai" is available.**
    - *Action:* Verify the availability of "mylatestproject.ai" in the search results.
 
 7. **Click on the "Buy Domain" button.**
@@ -166,9 +166,6 @@ Because they heard the job description said "looking for someone who can take th
    - *Action:* Locate and read the total price displayed for a 2-year rental of the domain during the checkout process.
 
 ## Expected Results:
-- The user should successfully navigate to the domain search page and enter the desired domain name.
 - The search results should be displayed, and ".ai" should be available.
 - The user should be able to click on "Buy Domain" and proceed to the checkout page.
 - The total price for a 2-year rental of the domain should be clearly displayed.
-
-

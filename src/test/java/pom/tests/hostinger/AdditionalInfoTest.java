@@ -31,8 +31,7 @@ public class AdditionalInfoTest extends TestBase {
         String text = "Why did the candidate bring a ladder to the job interview?\n" +
                 "\n" + "Because they heard the job description said \"looking for someone who can take things to the next level\"!";
         String password = "Testas123!";
-        String expectedResult = "Why did the candidate bring a ladder to the job interview?\n" +
-                "\n" + "Because they heard the job description said \"looking for someone who can take things to the next level\"!";;
+        String expectedResult = "Why did the candidate bring a ladder to the job interview? Because they heard the job description said \"looking for someone who can take things to the next level\"!";
         String actualResult;
 
         AdditionalInfoPage.clickOnAdditionalDetailsGroup();

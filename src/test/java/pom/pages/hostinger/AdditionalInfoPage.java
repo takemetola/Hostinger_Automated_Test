@@ -16,6 +16,7 @@ public class AdditionalInfoPage {
     public static void addTextToTextBox(String text) {
         Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.elementTextBoxWait);
         Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.elementTextBox);
+        Common.ctrlAAndDelete(Locator.Hostinger.AdditionalInfoPage.elementTextBox);
         Common.addText(Locator.Hostinger.AdditionalInfoPage.textAddToTextBox, text);
     }
 
@@ -30,6 +31,7 @@ public class AdditionalInfoPage {
     }
 
     public static void clickOnConfirmButton() {
+        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.buttonConfirmClick);
     }
 
     public static String readTextMessage() {

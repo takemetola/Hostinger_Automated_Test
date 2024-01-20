@@ -92,6 +92,7 @@ public class Locator {
             public static By spanAiDomain =
                     By.xpath("//span[contains(@class, 'h-text-break-keep-all') and contains(text(), '.ai')]");
             public static By buttonBuyDomain = By.xpath("(//span[@class='h-button-v2__text' and text()='Buy domain'])[19]");
+            public static By paragraphPrice = By.xpath("//p[@class='details-item__price' and @data-qa='purchase-detail-total']");
         }
     }
 }

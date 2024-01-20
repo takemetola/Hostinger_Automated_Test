@@ -21,11 +21,6 @@ public class Common {
         Driver.quitDriver();
     }
 
-    public static void setUpChrome(int durationOfSeconds) {
-        Driver.setUpChromeDriver();
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(durationOfSeconds));
-    }
-
     private static WebElement getElement(By locator) {
         return Driver.getDriver().findElement(locator);
     }

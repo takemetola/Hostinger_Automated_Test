@@ -133,7 +133,7 @@ Because they heard the job description said "looking for someone who can take th
 - After step 3, the additional details should include the added message.
 
 
-# Test Case Scenario 3: Domain Search and service addition to shopping cart
+# Test Case Scenario 3: Domain Search and service addition to the shopping cart
 ## Preconditions:
 - Login with valid account on set up:
   Data used:

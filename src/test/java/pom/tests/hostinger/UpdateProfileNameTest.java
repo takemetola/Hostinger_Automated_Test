@@ -2,6 +2,7 @@ package pom.tests.hostinger;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pom.pages.hostinger.LoginPage;
 import pom.pages.hostinger.UpdateProfileNamePage;
@@ -22,12 +23,16 @@ public class UpdateProfileNameTest extends TestBase {
         UpdateProfileNamePage.inoutPassword(password);
         UpdateProfileNamePage.clickOnButtonLoginAccount();
     }
-    @Test
-    public void testUpdateProfileInfo() throws InterruptedException {
 
-        String password = "Testas123!";
-        String firstName = "John";
-        String lastName = "Wick";
+    @DataProvider(name = "testUpdateProfileInfo")
+    public static Object[][] provideDataForTestUpdateProfileInfo() {
+        return new Object[][]{
+                {"Testas123!", "John", "Wick", "John Wick"}
+        };
+    }
+
+    @Test(dataProvider = "testUpdateProfileInfo")
+    public void testUpdateProfileInfo(String password, String firstName, String lastName, String expectedResult) {
 
         UpdateProfileNamePage.clickOnAccountIcon();
         UpdateProfileNamePage.clickonAccountInfomation();
@@ -38,7 +43,6 @@ public class UpdateProfileNameTest extends TestBase {
         UpdateProfileNamePage.addTextConfirmPassword(password);
         UpdateProfileNamePage.clickOnConfirmButton();
 
-        String expectedResult = "John Wick";
         String actualResult;
         actualResult = UpdateProfileNamePage.readTextFullName();
 

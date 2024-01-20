@@ -2,6 +2,7 @@ package pom.tests.hostinger;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pom.pages.hostinger.AdditionalInfoPage;
 import pom.pages.hostinger.UpdateProfileNamePage;
@@ -25,17 +26,16 @@ public class AdditionalInfoTest extends TestBase {
         UpdateProfileNamePage.clickonAccountInfomation();
     }
 
-    @Test
-    public void testAddingMoreInfoToProfile() throws InterruptedException {
+    @DataProvider(name = "testAddingMoreInfoToProfile")
+    public static Object[][] provideDataForTestAddingMoreInfoToProfile() {
+        return new Object[][]{
+                {"because it is worth doing it...", "Testas123!", "because it is worth doing it..."}
+        };
+    }
 
-        String text = "Why did the candidate bring a ladder to the job interview?\n" +
-                "\n" + "Because they heard the job description said \"" +
-                "looking for someone who can take things to the next level\"!";
-        String password = "Testas123!";
-        String expectedResult =
-                "Why did the candidate bring a ladder to the job interview? " +
-                        "Because they heard the job description said " +
-                        "\"looking for someone who can take things to the next level\"!";
+    @Test(dataProvider = "testAddingMoreInfoToProfile")
+    public void testAddingMoreInfoToProfile(String text, String password, String expectedResult) throws InterruptedException {
+
         String actualResult;
 
         AdditionalInfoPage.clickOnAdditionalDetailsGroup();

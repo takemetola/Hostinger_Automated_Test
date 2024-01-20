@@ -2,6 +2,7 @@ package pom.tests.hostinger;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pom.pages.hostinger.DomainSearchPage;
 import pom.pages.hostinger.UpdateProfileNamePage;
@@ -21,12 +22,16 @@ public class DomainSearchTest extends TestBase {
         UpdateProfileNamePage.inoutPassword(password);
         UpdateProfileNamePage.clickOnButtonLoginAccount();
     }
+    @DataProvider(name = "testDomainSearchAndShoppingCartFunctionality")
+    public static Object [][] provideDataForTestDomainSearchAndShoppingCartFunctionality() {
+        return new Object [][]{
+                {"mylatestproject", "$217.78"}
+        };
+    }
 
-    @Test
-    public void testDomainSearchAndShoppingCartFunctionality() {
+    @Test(dataProvider = "testDomainSearchAndShoppingCartFunctionality")
+    public void testDomainSearchAndShoppingCartFunctionality(String domainName, String expectedResult) {
 
-        String domainName = "mylatestproject";
-        String expectedResult = "$217.78";
         String actualResult;
 
         DomainSearchPage.clickOnDomainSection();
@@ -35,7 +40,7 @@ public class DomainSearchTest extends TestBase {
         String expectedResul1 = DomainSearchPage.readIsDomainAvailable();
 
         if (expectedResul1==expectedResul1) {
-            System.out.println("Domain with %s was found".formatted(expectedResul1));
+            System.out.println("Domain with %s was found.".formatted(expectedResul1));
         }
         else {
             System.out.println("Domain not found. Test Terminated.");

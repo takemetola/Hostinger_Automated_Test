@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo automation test" parallel="classes" thread-count="5">
+    <test name="All tests">
+        <classes>
+            <class name="pom.tests.hostinger.AdditionalInfoTest"/>
+            <class name="pom.tests.hostinger.DomainSearchTest"/>
+            <class name="pom.tests.hostinger.LoginTest"/>
+            <class name="pom.tests.hostinger.UpdatePhoneNumberTest"/>
+            <class name="pom.tests.hostinger.UpdateProfileNameTest"/>
+        </classes>
+    </test>
+</suite>

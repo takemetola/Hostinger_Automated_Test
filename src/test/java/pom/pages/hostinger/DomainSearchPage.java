@@ -34,4 +34,9 @@ public class DomainSearchPage {
         Common.waitForElementToBeVisible(Locator.Hostinger.DomainSearchPage.buttonBuyDomain);
         Common.clickOnElement(Locator.Hostinger.DomainSearchPage.buttonBuyDomain);
     }
+
+    public static String readTotalPrice() {
+        Common.waitForElementToBeVisible(Locator.Hostinger.DomainSearchPage.paragraphPrice);
+        return Common.getText(Locator.Hostinger.DomainSearchPage.paragraphPrice);
+    }
 }

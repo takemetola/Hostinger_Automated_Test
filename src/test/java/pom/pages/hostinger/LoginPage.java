@@ -10,8 +10,8 @@ public class LoginPage {
     }
 
     public static void clickCookiesDecline() {
-        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.waitForElementCookies);
-        Common.clickOnElement(Locator.Hostinger.LoginPage.buttonCLickOnCookiesDecline);
+        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.buttonCookiesDecline);
+        Common.clickOnElement(Locator.Hostinger.LoginPage.buttonCookiesDecline);
     }
 
     public static void clickOnButtonLogin() {
@@ -31,17 +31,17 @@ public class LoginPage {
     }
 
     public static void inputPasswordTextbox(String password) {
-        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.passwordWaitForElementBox);
-        Common.addText(Locator.Hostinger.LoginPage.loginInputPassword, password);
+        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.inputLoginPassword);
+        Common.addText(Locator.Hostinger.LoginPage.inputLoginPassword, password);
     }
 
     public static void clickOnAccountIcon() {
-        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.buttonWaitForAccountBox);
-        Common.clickOnElement(Locator.Hostinger.LoginPage.buttonClickonAccount);
+        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.buttonAccount);
+        Common.clickOnElement(Locator.Hostinger.LoginPage.buttonAccount);
     }
 
     public static String readUserEmail() {
-        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.textWaitForUserEmail);
+        Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.textUserEmail);
         return Common.getText(Locator.Hostinger.LoginPage.textUserEmail);
     }
 }

@@ -26,8 +26,8 @@ public class UpdateProfileNamePage {
     }
 
     public static void clickOnAccountIcon() {
-        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.locatorWaitAccountTab);
-        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.buttonClickAccountInfo);
+        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.locatorAccountTab);
+        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.buttonAccountInfo);
     }
 
     public static void clickonAccountInfomation() {
@@ -35,21 +35,21 @@ public class UpdateProfileNamePage {
     }
 
     public static void clickonNameGroup() {
-        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.locatorNameWait);
-        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.wrapperClickName);
+        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.divNameGroup);
+        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.divNameGroup);
     }
 
     public static void addTextFirstName(String firstName) {
-        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.elementWaitNameBox);
-        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.elementNameBoxClick);
-        Common.doubleClickOnElementByActions(Locator.Hostinger.UpdateProfileNamePage.doubleClickOnFirstNameBox);
-        Common.addText(Locator.Hostinger.UpdateProfileNamePage.textAddFirstName, firstName);
+        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.textFirstNameBox);
+        //Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.elementNameBoxClick);
+        Common.doubleClickOnElementByActions(Locator.Hostinger.UpdateProfileNamePage.textFirstNameBox);
+        Common.addText(Locator.Hostinger.UpdateProfileNamePage.textFirstNameBox, firstName);
     }
 
     public static void addTextLastName(String lastName) {
-        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.elementLastNameBoxClick);
-        Common.doubleClickOnElementByActions(Locator.Hostinger.UpdateProfileNamePage.doubleClickOnLastNameBox);
-        Common.addText(Locator.Hostinger.UpdateProfileNamePage.textAddLastName, lastName);
+        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.textLastNameBox);
+        Common.doubleClickOnElementByActions(Locator.Hostinger.UpdateProfileNamePage.textLastNameBox);
+        Common.addText(Locator.Hostinger.UpdateProfileNamePage.textLastNameBox, lastName);
     }
 
     public static void clickOnButtonContinue() {
@@ -57,9 +57,9 @@ public class UpdateProfileNamePage {
     }
 
     public static void addTextConfirmPassword(String password) {
-        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.passwordBoxElementWait);
-        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.passwordBoxElementClick);
-        Common.addText(Locator.Hostinger.UpdateProfileNamePage.textAddPassword, password);
+        Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.textPasswordBox);
+        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.textPasswordBox);
+        Common.addText(Locator.Hostinger.UpdateProfileNamePage.textPasswordBox, password);
     }
 
     public static void clickOnConfirmButton() {

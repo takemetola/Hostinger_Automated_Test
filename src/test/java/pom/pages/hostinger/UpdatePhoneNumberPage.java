@@ -10,14 +10,14 @@ public class UpdatePhoneNumberPage {
     }
 
     public static void clickOnPhoneNumberGroup() {
-        Common.waitForElementToBeVisible(5, Locator.Hostinger.UpdatePhoneNumberPage.elementPhoneBox2);
-        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.PhoneGroupElementClick);
+        Common.waitForElementToBeVisible(5, Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
+        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
     }
 
     public static void addPhoneNumber(String phoneNumber) {
-        Common.waitForElementToBeVisible(4, Locator.Hostinger.UpdatePhoneNumberPage.elementPhoneBox2);
-        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.phoneNumberGroupClick);
-        Common.doubleClickOnElementByActions(Locator.Hostinger.UpdatePhoneNumberPage.elementPhoneBoxClick);
+        Common.waitForElementToBeVisible(4, Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);
+        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.textAddPhoneNumber);
+        Common.ctrlAAndDelete(Locator.Hostinger.UpdatePhoneNumberPage.textAddPhoneNumber);
         Common.addText(Locator.Hostinger.UpdatePhoneNumberPage.textAddPhoneNumber, phoneNumber);
     }
 
@@ -26,9 +26,9 @@ public class UpdatePhoneNumberPage {
     }
 
     public static void addTextConfirmPassword(String password) {
-        Common.waitForElementToBeVisible(Locator.Hostinger.UpdatePhoneNumberPage.passwordBoxElementWait);
-        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.passwordBoxElementClick);
-        Common.addText(Locator.Hostinger.UpdatePhoneNumberPage.textAddPassword, password);
+        Common.waitForElementToBeVisible(Locator.Hostinger.UpdatePhoneNumberPage.elementCurrentPassword);
+        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.elementCurrentPassword);
+        Common.addText(Locator.Hostinger.UpdatePhoneNumberPage.elementCurrentPassword, password);
     }
 
     public static void clickOnConfirmButton() {

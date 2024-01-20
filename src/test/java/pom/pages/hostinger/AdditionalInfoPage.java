@@ -9,15 +9,15 @@ public class AdditionalInfoPage {
         Common.openUrl(url);
     }
     public static void clickOnAdditionalDetailsGroup() {
-        Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.elementAdditionalDetailsGroup);
-        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.buttonClickOnAdditionalDetailsGroup);
+        Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.paragraphAdditionalDetails);
+        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.paragraphAdditionalDetails);
     }
 
     public static void addTextToTextBox(String text) {
-        Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.elementTextBoxWait);
-        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.elementTextBox);
-        Common.ctrlAAndDelete(Locator.Hostinger.AdditionalInfoPage.elementTextBox);
-        Common.addText(Locator.Hostinger.AdditionalInfoPage.textAddToTextBox, text);
+        Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.divisionInputPersonalDetails);
+        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.divisionInputPersonalDetails);
+        Common.ctrlAAndDelete(Locator.Hostinger.AdditionalInfoPage.divisionInputPersonalDetails);
+        Common.addText(Locator.Hostinger.AdditionalInfoPage.divisionInputPersonalDetails, text);
     }
 
     public static void clickOnContinueButtonAdditionlInfoField() {
@@ -25,9 +25,9 @@ public class AdditionalInfoPage {
     }
 
     public static void addTextConfirmPassword(String password) {
-        Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.passwordBoxElementWait);
-        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.passwordBoxElementClick);
-        Common.addText(Locator.Hostinger.AdditionalInfoPage.textAddPassword, password);
+        Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.fieldCurrentPassword );
+        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.fieldCurrentPassword);
+        Common.addText(Locator.Hostinger.AdditionalInfoPage.fieldCurrentPassword, password);
     }
 
     public static void clickOnConfirmButton() {
@@ -36,6 +36,5 @@ public class AdditionalInfoPage {
 
     public static String readTextMessage() {
         return Common.getText(Locator.Hostinger.AdditionalInfoPage.textReadMessage);
-
     }
 }

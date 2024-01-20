@@ -48,7 +48,5 @@ public class AdditionalInfoTest extends TestBase {
         actualResult = AdditionalInfoPage.readTextMessage();
 
         Assert.assertEquals(actualResult, expectedResult);
-
-        System.out.println("Actual result: %s \nExpected result: %s".formatted(actualResult,expectedResult));
     }
 }

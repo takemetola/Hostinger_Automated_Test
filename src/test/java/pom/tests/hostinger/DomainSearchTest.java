@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pom.pages.hostinger.DomainSearchPage;
+import pom.pages.hostinger.LoginInfo;
 import pom.pages.hostinger.UpdateProfileNamePage;
 import pom.tests.TestBase;
 
@@ -17,10 +18,7 @@ public class DomainSearchTest extends TestBase {
         String email = "desire2work4hostinger@gmail.com";
         String password = "Testas123!";
 
-        UpdateProfileNamePage.clickOnButtonLogin();
-        UpdateProfileNamePage.inputEmail(email);
-        UpdateProfileNamePage.inoutPassword(password);
-        UpdateProfileNamePage.clickOnButtonLoginAccount();
+        LoginInfo.login(email, password);
     }
     @DataProvider(name = "testDomainSearchAndShoppingCartFunctionality")
     public static Object [][] provideDataForTestDomainSearchAndShoppingCartFunctionality() {
@@ -36,10 +34,9 @@ public class DomainSearchTest extends TestBase {
         String expectedResult1 = ".ai";
 
         DomainSearchPage.clickOnDomainSection();
-        DomainSearchPage.inputDomainNameToSeachBox(domainName);
-        DomainSearchPage.readIfDomainAvailable(expectedResult1);
+        DomainSearchPage.inputDomainNameToSearchBox(domainName);
         DomainSearchPage.buttonClickSearch();
-
+        DomainSearchPage.readIfDomainAvailable(expectedResult1);
         DomainSearchPage.clickOnBuyDomain();
 
         actualResult = DomainSearchPage.readTotalPrice();

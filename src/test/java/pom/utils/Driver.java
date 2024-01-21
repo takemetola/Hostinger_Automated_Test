@@ -18,7 +18,7 @@ public class Driver {
         ChromeOptions option = new ChromeOptions();
 
         //Does not run headless. Site checks for real human input.
-        option.addArguments("--headless=new");
+        //option.addArguments("--headless=new");
         option.addArguments("--start-maximized");
 
         driver.set(new ChromeDriver(option));
@@ -29,7 +29,7 @@ public class Driver {
     }
 
     public static void quitDriver() {
-        driver.get().quit();
-        driver.remove();
+        //driver.get().quit();
+        //driver.remove();
     }
 }

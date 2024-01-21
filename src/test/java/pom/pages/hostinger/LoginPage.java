@@ -27,6 +27,7 @@ public class LoginPage {
     }
 
     public static void clickOnNext() {
+        //Common.waitForElementToBeVisible(Locator.Hostinger.LoginPage.buttonClickNext);
         Common.clickOnElement(Locator.Hostinger.LoginPage.buttonClickNext);
     }
 

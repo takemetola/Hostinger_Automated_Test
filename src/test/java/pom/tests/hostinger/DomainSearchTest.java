@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pom.pages.UserCredentials;
 import pom.pages.hostinger.DomainSearchPage;
 import pom.pages.hostinger.LoginInfo;
 import pom.pages.hostinger.UpdateProfileNamePage;
@@ -15,8 +16,8 @@ public class DomainSearchTest extends TestBase {
     public void setUp() {
         DomainSearchPage.openUrl("https://www.hostinger.com");
 
-        String email = "desire2work4hostinger@gmail.com";
-        String password = "Testas123!";
+        String email = UserCredentials.getEmail();
+        String password = UserCredentials.getPassword();
 
         LoginInfo.login(email, password);
     }

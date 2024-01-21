@@ -14,7 +14,7 @@ public class DomainSearchPage {
         Common.clickOnElement(Locator.Hostinger.DomainSearchPage.spanDomains);
     }
 
-    public static void inputDomainNameToSeachBox(String domainName) {
+    public static void inputDomainNameToSearchBox(String domainName) {
         Common.waitForElementToBeVisible(Locator.Hostinger.DomainSearchPage.formFieldDomainName);
         Common.clickOnElement(Locator.Hostinger.DomainSearchPage.formFieldDomainName);
         Common.addText(Locator.Hostinger.DomainSearchPage.formFieldDomainName, domainName);
@@ -25,11 +25,7 @@ public class DomainSearchPage {
     }
 
 
-    public static void clickOnBuyDomain() throws InterruptedException {
-
-        Thread.sleep(5000);
-        Common.scrollWindowByActionsPlus3500Y2();
-        Thread.sleep(2000);
+    public static void clickOnBuyDomain() {
         Common.clickOnElement(Locator.Hostinger.DomainSearchPage.buttonBuyDomain);
     }
 
@@ -38,12 +34,17 @@ public class DomainSearchPage {
         return Common.getText(Locator.Hostinger.DomainSearchPage.paragraphPrice);
     }
 
-    public static void readIfDomainAvailable(String expectedResult1) {
-        if (expectedResult1 == expectedResult1) {
+    public static void readIfDomainAvailable(String expectedResult1) throws InterruptedException {
+        Thread.sleep(5000);
+        Common.scrollWindowByActionsPlus3500Y2();
+        Thread.sleep(2000);
+        String domainName = Common.getText(Locator.Hostinger.DomainSearchPage.getDomainNameAi);
+
+        if (expectedResult1.equals(domainName)) {
             System.out.println("Domain with %s was found.".formatted(expectedResult1));
         } else {
-            System.out.println("Domain not found. Test Terminated.");
-            System.exit(0);
+            System.out.println("Domain .ai not found. Test Terminated.");
+            //System.exit(0);
         }
     }
 }

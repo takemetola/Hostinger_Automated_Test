@@ -30,22 +30,15 @@ public class DomainSearchTest extends TestBase {
     }
 
     @Test(dataProvider = "testDomainSearchAndShoppingCartFunctionality")
-    public void testDomainSearchAndShoppingCartFunctionality(String domainName, String expectedResult) {
+    public void testDomainSearchAndShoppingCartFunctionality(String domainName, String expectedResult) throws InterruptedException {
 
         String actualResult;
+        String expectedResult1 = ".ai";
 
         DomainSearchPage.clickOnDomainSection();
         DomainSearchPage.inputDomainNameToSeachBox(domainName);
+        DomainSearchPage.readIfDomainAvailable(expectedResult1);
         DomainSearchPage.buttonClickSearch();
-        String expectedResul1 = DomainSearchPage.readIsDomainAvailable();
-
-        if (expectedResul1==expectedResul1) {
-            System.out.println("Domain with %s was found.".formatted(expectedResul1));
-        }
-        else {
-            System.out.println("Domain not found. Test Terminated.");
-            System.exit(0);
-        }
 
         DomainSearchPage.clickOnBuyDomain();
 

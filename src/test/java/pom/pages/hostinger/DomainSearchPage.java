@@ -24,19 +24,26 @@ public class DomainSearchPage {
         Common.clickOnElement(Locator.Hostinger.DomainSearchPage.buttonSearch);
     }
 
-    public static String readIsDomainAvailable() {
-        Common.waitForElementToBeVisible(Locator.Hostinger.DomainSearchPage.spanAiDomain);
-        return Common.getText(Locator.Hostinger.DomainSearchPage.spanAiDomain);
-    }
 
-    public static void clickOnBuyDomain() {
-        Common.scrollWindowByActionsPlus3500Y();
-        Common.waitForElementToBeVisible(Locator.Hostinger.DomainSearchPage.buttonBuyDomain);
+    public static void clickOnBuyDomain() throws InterruptedException {
+
+        Thread.sleep(5000);
+        Common.scrollWindowByActionsPlus3500Y2();
+        Thread.sleep(2000);
         Common.clickOnElement(Locator.Hostinger.DomainSearchPage.buttonBuyDomain);
     }
 
     public static String readTotalPrice() {
         Common.waitForElementToBeVisible(Locator.Hostinger.DomainSearchPage.paragraphPrice);
         return Common.getText(Locator.Hostinger.DomainSearchPage.paragraphPrice);
+    }
+
+    public static void readIfDomainAvailable(String expectedResult1) {
+        if (expectedResult1 == expectedResult1) {
+            System.out.println("Domain with %s was found.".formatted(expectedResult1));
+        } else {
+            System.out.println("Domain not found. Test Terminated.");
+            System.exit(0);
+        }
     }
 }

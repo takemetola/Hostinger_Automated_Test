@@ -5,6 +5,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pom.utils.Driver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
@@ -70,10 +72,9 @@ public class Common {
         actions.perform();
     }
 
-    public static void scrollWindowByActionsPlus3500Y() {
-        Actions actions = new Actions(Driver.getDriver());
-        actions
-                .scrollByAmount(0, 3500)
-                .perform();
+    public static void scrollWindowByActionsPlus3500Y2() {
+        WebDriver driver = Driver.getDriver();
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("window.scrollBy(0, 3500);");
     }
 }

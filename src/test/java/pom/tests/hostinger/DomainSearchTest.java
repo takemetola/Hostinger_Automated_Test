@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import pom.pages.UserCredentials;
 import pom.pages.hostinger.DomainSearchPage;
 import pom.pages.hostinger.LoginInfo;
-import pom.pages.hostinger.UpdateProfileNamePage;
 import pom.tests.TestBase;
 
 public class DomainSearchTest extends TestBase {

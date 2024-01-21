@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import pom.pages.hostinger.LoginPage;
 import pom.tests.TestBase;
 
-public class LoginTest  extends TestBase {
+public class LoginTestGmail extends TestBase {
     @BeforeMethod
     @Override
     public void setUp() {

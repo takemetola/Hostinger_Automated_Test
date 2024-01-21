@@ -8,6 +8,14 @@ public class UpdatePhoneNumberPage {
         Common.setUpChrome();
         Common.openUrl(url);
     }
+    public static void clickOnAccountIcon() {
+        Common.waitForElementToBeVisible(Locator.Hostinger.UpdatePhoneNumberPage.buttonAccountInfo);
+        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.buttonAccountInfo);
+    }
+
+    public static void clickonAccountInfomation() {
+        Common.clickOnElement(Locator.Hostinger.UpdatePhoneNumberPage.buttonClickGetAccountInfo);
+    }
 
     public static void clickOnPhoneNumberGroup() {
         Common.waitForElementToBeVisible(Locator.Hostinger.UpdatePhoneNumberPage.paragraphPhoneNumber);

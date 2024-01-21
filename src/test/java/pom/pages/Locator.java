@@ -4,6 +4,12 @@ import org.openqa.selenium.By;
 
 public class Locator {
     public static class Hostinger {
+        public class LoginInfo {
+            public static By buttonClickLogin = By.xpath("//a[@id='hgr-topmenu-login']");
+            public static By loginInputEmail = By.xpath("//input[@id='email-input']");
+            public static By loginInputPassword = By.xpath("//input[@id='password-input']");
+            public static By buttonClickLoginAccount = By.xpath("//button[@data-qa='login-button']");
+        }
 
         public class LoginPage {
             public static By buttonCookiesDecline =
@@ -22,11 +28,6 @@ public class Locator {
         }
 
         public class UpdateProfileNamePage {
-
-            public static By buttonClickLogin = By.xpath("//a[@id='hgr-topmenu-login']");
-            public static By loginInputEmail = By.xpath("//input[@id='email-input']");
-            public static By loginInputPassword = By.xpath("//input[@id='password-input']");
-            public static By buttonClickLoginAccount = By.xpath("//button[@data-qa='login-button']");
             public static By buttonAccountInfo =
                     By.xpath("//button[@class='header__user-profile button-plain header__icon']");
             public static By buttonClickGetAccountInfo = By.xpath("(//span[@class='h-nav__link-text' " +
@@ -50,6 +51,10 @@ public class Locator {
         }
 
         public class UpdatePhoneNumberPage {
+            public static By buttonAccountInfo =
+                    By.xpath("//button[@class='header__user-profile button-plain header__icon']");
+            public static By buttonClickGetAccountInfo = By.xpath("(//span[@class='h-nav__link-text' " +
+                    "and text()='Account Information'])[2]");
             public static By paragraphPhoneNumber =
                     By.xpath("//p[@data-msgid='Phone number' and text()='Phone number']");
             public static By textAddPhoneNumber = By.xpath("//hp-form-field[@name='phone']");
@@ -66,7 +71,10 @@ public class Locator {
         }
 
         public class AdditionalInfoPage {
-
+            public static By buttonAccountInfo =
+                    By.xpath("//button[@class='header__user-profile button-plain header__icon']");
+            public static By buttonClickGetAccountInfo = By.xpath("(//span[@class='h-nav__link-text' " +
+                    "and text()='Account Information'])[2]");
             public static By fieldCurrentPassword = By.xpath("//hp-form-field[@name='currentPassword']");
             public static By paragraphAdditionalDetails =
                     By.xpath("//p[@data-msgid='Additional details']");
@@ -88,12 +96,9 @@ public class Locator {
                     "and @data-msgid='Domains']");
             public static By formFieldDomainName = By.xpath("//hp-form-field[@name='searchedDomain']");
             public static By buttonSearch = By.xpath("//button[@class='h-button-v2 submit-button']");
-            public static By spanAiDomain =
-                    By.xpath("//span[contains(@class, 'h-text-break-keep-all') and contains(text(), '.ai')]");
-            //public static By buttonBuyDomain = By.xpath("(//span[@class='h-button-v2__text' and text()='Buy domain'])[19]");
             public static By buttonBuyDomain = By.xpath("(//span[@class='h-button-v2__text' and text()='Buy domain'])[19]");
             public static By paragraphPrice = By.xpath("//p[@class='details-item__price' and @data-qa='purchase-detail-total']");
-            public static By priceElement = By.xpath("//h1[@class='item-new' and @data-v-37e9e1d4='' and contains(text(), '$79.99')]");
+            public static By spanDomainNameAi = By.xpath("//span[@class='h-text-break-keep-all' and text()='.ai']");
         }
     }
 }

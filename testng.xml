@@ -5,7 +5,7 @@
         <classes>
             <class name="pom.tests.hostinger.AdditionalInfoTest"/>
             <class name="pom.tests.hostinger.DomainSearchTest"/>
-            <class name="pom.tests.hostinger.LoginTest"/>
+            <class name="pom.tests.hostinger.LoginTestGmail"/>
             <class name="pom.tests.hostinger.UpdatePhoneNumberTest"/>
             <class name="pom.tests.hostinger.UpdateProfileNameTest"/>
         </classes>

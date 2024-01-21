@@ -38,7 +38,7 @@ public class DomainSearchPage {
         Thread.sleep(5000);
         Common.scrollWindowByActionsPlus3500Y2();
         Thread.sleep(2000);
-        String domainName = Common.getText(Locator.Hostinger.DomainSearchPage.getDomainNameAi);
+        String domainName = Common.getText(Locator.Hostinger.DomainSearchPage.spanDomainNameAi);
 
         if (expectedResult1.equals(domainName)) {
             System.out.println("Domain with %s was found.".formatted(expectedResult1));

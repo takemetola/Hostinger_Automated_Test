@@ -9,22 +9,6 @@ public class UpdateProfileNamePage {
         Common.openUrl(url);
     }
 
-    public static void clickOnButtonLogin() {
-        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.buttonClickLogin);
-    }
-
-    public static void inputEmail(String email) {
-        Common.addText(Locator.Hostinger.UpdateProfileNamePage.loginInputEmail, email);
-    }
-
-    public static void inoutPassword(String password) {
-        Common.addText(Locator.Hostinger.UpdateProfileNamePage.loginInputPassword, password);
-    }
-
-    public static void clickOnButtonLoginAccount() {
-        Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.buttonClickLoginAccount);
-    }
-
     public static void clickOnAccountIcon() {
         Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.locatorAccountTab);
         Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.buttonAccountInfo);
@@ -41,7 +25,6 @@ public class UpdateProfileNamePage {
 
     public static void addTextFirstName(String firstName) {
         Common.waitForElementToBeVisible(Locator.Hostinger.UpdateProfileNamePage.textFirstNameBox);
-        //Common.clickOnElement(Locator.Hostinger.UpdateProfileNamePage.elementNameBoxClick);
         Common.doubleClickOnElementByActions(Locator.Hostinger.UpdateProfileNamePage.textFirstNameBox);
         Common.addText(Locator.Hostinger.UpdateProfileNamePage.textFirstNameBox, firstName);
     }

@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pom.pages.UserCredentials;
+import pom.pages.hostinger.LoginInfo;
 import pom.pages.hostinger.LoginPage;
 import pom.pages.hostinger.UpdateProfileNamePage;
 import pom.tests.TestBase;
@@ -15,13 +17,10 @@ public class UpdateProfileNameTest extends TestBase {
         UpdateProfileNamePage.openUrl("https://www.hostinger.com");
         LoginPage.clickCookiesDecline();
 
-        String email = "desire2work4hostinger@gmail.com";
-        String password = "Testas123!";
+        String email = UserCredentials.getEmail();
+        String password = UserCredentials.getPassword();
 
-        UpdateProfileNamePage.clickOnButtonLogin();
-        UpdateProfileNamePage.inputEmail(email);
-        UpdateProfileNamePage.inoutPassword(password);
-        UpdateProfileNamePage.clickOnButtonLoginAccount();
+        LoginInfo.login(email, password);
     }
 
     @DataProvider(name = "testUpdateProfileInfo")

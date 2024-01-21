@@ -8,6 +8,15 @@ public class AdditionalInfoPage {
         Common.setUpChrome();
         Common.openUrl(url);
     }
+    public static void clickOnAccountIcon() {
+        Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.buttonAccountInfo);
+        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.buttonAccountInfo);
+    }
+
+    public static void clickonAccountInfomation() {
+        Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.buttonClickGetAccountInfo);
+    }
+
     public static void clickOnAdditionalDetailsGroup() {
         Common.waitForElementToBeVisible(Locator.Hostinger.AdditionalInfoPage.paragraphAdditionalDetails);
         Common.clickOnElement(Locator.Hostinger.AdditionalInfoPage.paragraphAdditionalDetails);

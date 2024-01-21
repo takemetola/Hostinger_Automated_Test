@@ -4,8 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pom.pages.UserCredentials;
+import pom.pages.hostinger.LoginInfo;
 import pom.pages.hostinger.UpdatePhoneNumberPage;
-import pom.pages.hostinger.UpdateProfileNamePage;
 import pom.tests.TestBase;
 
 public class UpdatePhoneNumberTest extends TestBase {
@@ -13,17 +14,11 @@ public class UpdatePhoneNumberTest extends TestBase {
     @Override
     public void setUp() {
         UpdatePhoneNumberPage.openUrl("https://www.hostinger.com/");
-        UpdateProfileNamePage.clickOnButtonLogin();
 
-        String email = "desire2work4hostinger@gmail.com";
-        String password = "Testas123!";
+        String email = UserCredentials.getEmail();
+        String password = UserCredentials.getPassword();
 
-        UpdateProfileNamePage.inputEmail(email);
-        UpdateProfileNamePage.inoutPassword(password);
-        UpdateProfileNamePage.clickOnButtonLoginAccount();
-
-        UpdateProfileNamePage.clickOnAccountIcon();
-        UpdateProfileNamePage.clickonAccountInfomation();
+        LoginInfo.login(email, password);
     }
 
     @DataProvider(name = "testUpdatePhoneNumber")
@@ -37,6 +32,8 @@ public class UpdatePhoneNumberTest extends TestBase {
     public void testUpdatePhoneNumber(String phoneNumber, String password, String expectedResult) throws InterruptedException {
         String actualResult;
 
+        UpdatePhoneNumberPage.clickOnAccountIcon();
+        UpdatePhoneNumberPage.clickonAccountInfomation();
         UpdatePhoneNumberPage.clickOnPhoneNumberGroup();
         Thread.sleep(3000);
         UpdatePhoneNumberPage.addPhoneNumber(phoneNumber);

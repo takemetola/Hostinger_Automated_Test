@@ -170,4 +170,4 @@ Verify that a user can successfully add additional details to their account info
 ## Expected Results:
 - The search results should be displayed, and ".ai" should be available.
 - The user should be able to click on "Buy Domain" and proceed to the checkout page.
-- The total price "$217.78" for a 2-year rental of the domain should be clearly displayed.
+- The total price "$217.78" for a 2-year lease of the domain should be clearly displayed.

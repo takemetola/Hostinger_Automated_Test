@@ -24,7 +24,7 @@ public class AdditionalInfoTest extends TestBase {
     @DataProvider(name = "testAddingMoreInfoToProfile")
     public static Object[][] provideDataForTestAddingMoreInfoToProfile() {
         return new Object[][]{
-                {"because it is worth doing it...", "Testas123!", "because it is worth doing it..."}
+                {"# $ % & ' ( ) / 0 1 2 3 ; < = > ? a b c { | } ~", "Testas123!", "# $ % & ' ( ) / 0 1 2 3 ; < = > ? a b c { | } ~"}
         };
     }
 

@@ -33,17 +33,15 @@ public class Locator {
             public static By buttonClickGetAccountInfo = By.xpath("(//span[@class='h-nav__link-text' " +
                     "and text()='Account Information'])[2]");
             public static By divNameGroup =
-                    By.xpath("//div[@class='h-list-group-item h-list-group-item--clickable']" +
-                            "//div[@class='h-list-group__content-wrapper']/p[@data-msgid='Name']/following-sibling::" +
-                            "div[@class='text-md-left text-sm-right text-left']");
-            public static By textFirstNameBox = By.xpath("//hp-form-field[@name='firstName']");
+                    By.xpath("//p[@data-msgid='Name']");
+            public static By textFirstNameBox = By.xpath("//input[@id='firstName']");
             public static By locatorAccountTab =
                     By.xpath("//button[@class='header__user-profile button-plain header__icon']");
-            public static By textLastNameBox = By.xpath("//hp-form-field[@name='lastName']");
+            public static By textLastNameBox = By.xpath("//input[@id='lastName']");
             public static By buttonClickContinue =
                     By.xpath("//button[@class='h-button-v2' " +
                             "and @data-qa='hpanel_tracking-personal-information-continue_button']");
-            public static By textPasswordBox = By.xpath("//hp-form-field[@name='currentPassword']");
+            public static By textPasswordBox = By.xpath("//input[@type='password']");
             public static By buttonClickConfirm =
                     By.xpath("//button[@data-qa='hpanel_tracking-personal-information-confirm_button']");
             public static By readTextFullName =
@@ -56,13 +54,11 @@ public class Locator {
             public static By buttonClickGetAccountInfo = By.xpath("(//span[@class='h-nav__link-text' " +
                     "and text()='Account Information'])[2]");
             public static By paragraphPhoneNumber =
-                    By.xpath("//p[@data-msgid='Phone number' and text()='Phone number']");
-            public static By textAddPhoneNumber = By.xpath("//hp-form-field[@name='phone']");
-            public static By phoneNumberGroupClick = By.xpath("//hp-form-field[@name='phone']");
+                    By.xpath("//p[@data-msgid='Phone number']");
+            public static By textAddPhoneNumber = By.xpath("//input[@id='phone' and @type='text']");
             public static By buttonClickConfirmChanges =
-                    By.xpath("//button[@data-v-2fe5f685 " +
-                            "and @data-qa='hpanel_tracking-personal-information-continue_button']");
-            public static By elementCurrentPassword = By.xpath("//hp-form-field[@name='currentPassword']");
+                    By.xpath("//button[@data-qa='hpanel_tracking-personal-information-continue_button']");
+            public static By elementCurrentPassword = By.xpath("//input[@type='password']");
             public static By buttonClickConfirm =
                     By.xpath("//button[@data-qa='hpanel_tracking-personal-information-confirm_button']");
             public static By textReadPhoneNumber =
@@ -75,16 +71,13 @@ public class Locator {
                     By.xpath("//button[@class='header__user-profile button-plain header__icon']");
             public static By buttonClickGetAccountInfo = By.xpath("(//span[@class='h-nav__link-text' " +
                     "and text()='Account Information'])[2]");
-            public static By fieldCurrentPassword = By.xpath("//hp-form-field[@name='currentPassword']");
+            public static By fieldCurrentPassword = By.xpath("//input[@type='password']");
             public static By paragraphAdditionalDetails =
                     By.xpath("//p[@data-msgid='Additional details']");
             public static By divisionInputPersonalDetails =
-                    By.xpath("//div[@data-v-577ee0b7='' " +
-                            "and @class='personal-information__inputs']//hp-form-field[@name='additionalDetails']");
+                    By.xpath("//textarea[@id='additionalDetails']");
             public static By buttonClickContinueAtInfoField =
-                    By.xpath("//button[@data-v-2fe5f685 and @data-v-577ee0b7 " +
-                            "and @class='h-button-v2' and @hp-form-submit " +
-                            "and @data-qa='hpanel_tracking-personal-information-continue_button']");
+                    By.xpath("//button[@class='h-button-v2' and @data-qa='hpanel_tracking-personal-information-continue_button']");
             public static By textReadMessage =
                     By.xpath("(//div[@class='text-md-left text-sm-right text-left'])[5]");
             public static By buttonConfirmClick =
@@ -94,7 +87,7 @@ public class Locator {
         public class DomainSearchPage {
             public static By spanDomains = By.xpath("//span[@class='header-menu__link-text' " +
                     "and @data-msgid='Domains']");
-            public static By formFieldDomainName = By.xpath("//hp-form-field[@name='searchedDomain']");
+            public static By formFieldDomainName = By.xpath("//input[@type='text']");
             public static By buttonSearch = By.xpath("//button[@class='h-button-v2 submit-button']");
             public static By buttonBuyDomain = By.xpath("(//span[@class='h-button-v2__text' and text()='Buy domain'])[19]");
             public static By paragraphPrice = By.xpath("//p[@class='details-item__price' and @data-qa='purchase-detail-total']");

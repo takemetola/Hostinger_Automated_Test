@@ -26,6 +26,7 @@ public class DomainSearchPage {
 
 
     public static void clickOnBuyDomain() {
+        Common.waitForElementToBeVisible(Locator.Hostinger.DomainSearchPage.buttonBuyDomain);
         Common.clickOnElement(Locator.Hostinger.DomainSearchPage.buttonBuyDomain);
     }
 

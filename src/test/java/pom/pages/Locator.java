@@ -89,7 +89,7 @@ public class Locator {
                     "and @data-msgid='Domains']");
             public static By formFieldDomainName = By.xpath("//input[@type='text']");
             public static By buttonSearch = By.xpath("//button[@class='h-button-v2 submit-button']");
-            public static By buttonBuyDomain = By.xpath("(//span[@class='h-button-v2__text' and text()='Buy domain'])[19]");
+            public static By buttonBuyDomain = By.xpath("(//button[@class='h-button-v2 purchase-button' and @id='hpanel_tracking-domain-checker-buy_by_category_button'])[14]");
             public static By paragraphPrice = By.xpath("//p[@class='details-item__price' and @data-qa='purchase-detail-total']");
             public static By spanDomainNameAi = By.xpath("//span[@class='h-text-break-keep-all' and text()='.ai']");
         }

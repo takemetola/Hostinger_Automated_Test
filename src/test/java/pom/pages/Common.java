@@ -75,6 +75,6 @@ public class Common {
     public static void scrollWindowByActionsPlus3500Y2() {
         WebDriver driver = Driver.getDriver();
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("window.scrollBy(0, 3500);");
+        jsExecutor.executeScript("window.scrollBy(0, 2000);");
     }
 }

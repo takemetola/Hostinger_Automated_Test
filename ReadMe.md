@@ -82,7 +82,7 @@ Verify that a user can successfully update their phone number in the account inf
 - Login with valid account on set up:
   Data used:
   e-mail: desire2work4hostinger@gmail.com
-  password: Testas123!
+  password: testapp123
 
 #### Steps
 1. **Login with Existing User Data**

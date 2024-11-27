@@ -24,7 +24,7 @@ To verify that existing users can successfully log in via Gmail to their <a href
     - Data used: desire2work4hostinger@gmail.com
 
 6. **Enter valid password for the account and click next:**
-    - Data used: testas123
+    - Data used: testapp123
 
 6. **Verification:**
     - User is taken to homepage.
@@ -53,7 +53,7 @@ Verify that a user can successfully update their name in the account information
 - Login with valid account on set up:
   Data used:
   e-mail: desire2work4hostinger@gmail.com
-  password: Testas123!
+  password: testapp123
 
 #### Test Steps:
 1. **Login with Existing User Data**
@@ -112,7 +112,7 @@ Verify that a user can successfully add additional details to their account info
 - Login with valid account on set up:
   Data used:
   e-mail: desire2work4hostinger@gmail.com
-  password: Testas123!
+  password: testapp123
 
 #### Steps:
 1. **Login with Existing User Data**
@@ -140,7 +140,7 @@ Verify that a user can successfully add additional details to their account info
 - Login with valid account on set up:
   Data used:
   e-mail: desire2work4hostinger@gmail.com
-  password: Testas123!
+  password: testapp123
 
 ## Steps:
 1. **Navigate to the Hostinger.com homepage.**
